@@ -446,7 +446,9 @@ def get_contours(name, small, pagemask, masktype):
 
     mask = get_mask(name, small, pagemask, masktype)
 
-    _, contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL,
+    # https://stackoverflow.com/questions/20851365/opencv-contours-need-more-than-2-values-to-unpack
+#    _, contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL,
+    _, contours = cv2.findContours(mask, cv2.RETR_EXTERNAL,
                                       cv2.CHAIN_APPROX_NONE)
 
     contours_out = []

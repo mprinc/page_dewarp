@@ -1,5 +1,8 @@
-page_dewarp
+# page_dewarp
 numpy
 scipy
 Image
-cv2>=3.0
+image
+nose
+tornado
+opencv-python
